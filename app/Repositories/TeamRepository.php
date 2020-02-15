@@ -36,8 +36,8 @@ class TeamRepository implements TeamRepositoryInterface
     {
         // TODO: Implement lost() method.
         $team = Team::where('id',$team_id)->first();
-        $team->played= $team->played++;
-        $team->lost = $team->lost++;
+        $team->played= $team->played+1;
+        $team->lost = $team->lost+1;
         $team->points = $team->points+$this->lostPoints;
         $team->save();
 
@@ -47,8 +47,8 @@ class TeamRepository implements TeamRepositoryInterface
     {
         // TODO: Implement drawn() method.
         $team = Team::where('id',$team_id)->first();
-        $team->played= $team->played++;
-        $team->drawn = $team->drawn++;
+        $team->played= $team->played+1;
+        $team->drawn = $team->drawn+1;
         $team->points = $team->points+$this->drawnPoints;
         $team->save();
 
@@ -58,8 +58,8 @@ class TeamRepository implements TeamRepositoryInterface
     {
         // TODO: Implement won() method.
         $team = Team::where('id',$team_id)->first();
-        $team->played= $team->played++;
-        $team->won = $team->won++;
+        $team->played= $team->played+1;
+        $team->won = $team->won+1;
         $team->points = $team->points+$this->wonPoints;
         $team->save();
     }
