@@ -59,7 +59,7 @@ class TeamRepository implements TeamRepositoryInterface
         // TODO: Implement won() method.
         $team = Team::where('id',$team_id)->first();
         $team->played= $team->played++;
-        $team->drawn = $team->lost++;
+        $team->won = $team->won++;
         $team->points = $team->points+$this->wonPoints;
         $team->save();
     }
