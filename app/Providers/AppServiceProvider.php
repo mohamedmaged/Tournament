@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Repositories\BackendServiceProvider;
+use http\Url;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
