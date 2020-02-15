@@ -37,7 +37,6 @@ class MatchController extends Controller
      * @param Request $request
      */public function store(Request $request)
     {
-//        dd($request->all());
         $validator =
             $request->validate(
             [
